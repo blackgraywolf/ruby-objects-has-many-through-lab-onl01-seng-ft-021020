@@ -19,14 +19,14 @@ class Patient
     end
   end
 
-def doctors
-    appointments.collect do |appointment|
+# def doctors
+#     appointments.collect do |appointment|
+#       appointment.doctor
+#     end
+#   end
+ def doctors
+    Appointment.all.map do |appointment|
       appointment.doctor
-    end
-  end
-def artists
-    Song.all.map do |song|
-      song.artist
     end
   end
  def new_appointment(doctor, date)
