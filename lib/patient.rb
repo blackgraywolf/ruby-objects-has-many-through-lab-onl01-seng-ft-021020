@@ -27,7 +27,7 @@ class Patient
   end
  def new_appointment(doctor, date)
     appointment = Appointment.new(self, doctor, date)
-    self.appointment.last
+    self.appointments.last
   end
   # def new_song(name, genre)
   #   song = Song.new(name, self, genre)
