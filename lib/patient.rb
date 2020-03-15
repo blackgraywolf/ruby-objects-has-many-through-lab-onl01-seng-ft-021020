@@ -19,10 +19,14 @@ class Patient
     end
   end
 
-
-  def doctors
-    appointments.collect {|appointment| appointment.doctor}
+def doctors
+    appointments.collect do |appointment|
+      appointment.doctor
+    end
   end
+  # def doctors
+  #   appointments.collect {|appointment| appointment.doctor}
+  # end
   
  def new_appointment(doctor, date)
     Appointment.new(self, doctor, date)
