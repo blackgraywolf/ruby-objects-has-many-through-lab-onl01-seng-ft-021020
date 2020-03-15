@@ -24,10 +24,11 @@ def doctors
       appointment.doctor
     end
   end
-  # def doctors
-  #   appointments.collect {|appointment| appointment.doctor}
-  # end
-  
+def artists
+    Song.all.map do |song|
+      song.artist
+    end
+  end
  def new_appointment(doctor, date)
     Appointment.new(self, doctor, date)
   end
